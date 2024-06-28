@@ -18,7 +18,7 @@ print:
 	PUSH si		; preserve si,ax,bx,registers by pushing onto stack
 	PUSH ax
 	PUSH bx
-
+				; test
 print_loop:
 	LODSB		; load Single Byte; contains current character in the si register
 	OR al,al	; check to see if the next charachter value is zero

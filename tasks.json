@@ -1,0 +1,31 @@
+{
+      "makefile.extensionsOutputFolder": "./.vscode",
+      "makefile.makePath": "/usr/bin/make",
+      "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+
+      "version": "2.0.0",
+      "tasks": [
+            {
+                  "label": "Show Tree",
+                  "type": "shell",
+                  "command": "tree",
+                  "args": [
+                  "-L",
+                  "2"
+                  ],
+                  "problemMatcher": [],
+                  "windows": {
+                  "command": "powershell",
+                  "args": [
+                        "-Command",
+                        "Get-ChildItem -Recurse -Depth 2 | Format-Wide -Column 1"
+                  ]
+                  },
+                  "group": {
+                  "kind": "build",
+                  "isDefault": true
+                  }
+            }
+      ]
+
+}
